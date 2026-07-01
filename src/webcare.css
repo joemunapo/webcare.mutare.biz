@@ -244,10 +244,12 @@
   }
 
   #order-standard_cart .products > .row > [class*="col-"] {
+    flex: none !important;
+    flex-basis: auto !important;
     float: none;
-    max-width: none;
+    max-width: none !important;
     padding: 0;
-    width: auto;
+    width: auto !important;
   }
 
   #order-standard_cart .products .product,
@@ -269,6 +271,7 @@
     position: relative;
     text-align: left;
     transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+    width: 100% !important;
   }
 
   #order-standard_cart .products .product:nth-child(2),
