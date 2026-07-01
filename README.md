@@ -9,7 +9,7 @@ Deployment-ready WHMCS v9 child theme and order-form styling for WebCare by Muta
 - `src/webcare.css` - Tailwind v4 source CSS.
 - `scripts/build-theme.sh` - builds `css/custom.css`.
 - `scripts/deploy-theme.sh` - copies the theme folders into a WHMCS install.
-- `.github/workflows/deploy-whmcs-theme.yml` - optional push-to-deploy workflow.
+- `scripts/server-pull-deploy.sh` - server-side pull and deploy script for cron.
 
 The system theme is a child of `twenty-one`, which keeps WHMCS core templates updateable and only overrides styling through `css/custom.css`.
 The Tailwind build intentionally omits Preflight resets so the WHMCS parent theme keeps its expected base behavior.
@@ -42,19 +42,11 @@ Preview before switching live:
 https://webcare.mutare.biz/index.php/store/webcare-by-mutarebiz?systpl=webcare&carttpl=webcare_cart
 ```
 
-## Push-To-Deploy
+## Server Pull Deploy
 
-The GitHub Actions workflow builds the Tailwind CSS and deploys only these folders:
+The production server pulls this repo and deploys only these folders:
 
 - `whmcs/templates/webcare/`
 - `whmcs/templates/orderforms/webcare_cart/`
-
-Required repository secrets:
-
-- `WHMCS_SSH_HOST`
-- `WHMCS_SSH_USER`
-- `WHMCS_SSH_PORT`
-- `WHMCS_SSH_KEY`
-- `WHMCS_ROOT`
 
 The deployment deliberately avoids deleting or modifying WHMCS core files.
