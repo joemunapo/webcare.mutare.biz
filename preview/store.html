@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WebCare Theme Preview</title>
+  <link rel="stylesheet" href="../whmcs/templates/webcare/css/custom.css">
+  <style>
+    body { margin: 0; }
+    .preview-shell { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+    .preview-header { padding: 20px 0 18px; }
+    .preview-nav { display: flex; gap: 28px; flex-wrap: wrap; padding: 14px 0 22px; }
+    .preview-grid { display: grid; gap: 28px; grid-template-columns: 280px 1fr; padding: 38px 24px 70px; }
+    .preview-sidebar { display: grid; gap: 18px; align-content: start; }
+    .preview-products { display: grid; gap: 24px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .preview-footer { padding: 32px 24px; }
+    .preview-price { margin: 12px 0 28px; font-weight: 680; }
+    .preview-ribbon { position: absolute; top: 18px; right: -38px; transform: rotate(45deg); width: 128px; text-align: center; padding: 5px 0; }
+    .preview-sidebar .panel { overflow: hidden; }
+    .preview-sidebar .panel-heading { padding: 14px 16px; }
+    .preview-sidebar .list-group { display: grid; }
+    .preview-sidebar .list-group-item { display: block; padding: 12px 16px; text-decoration: none; }
+    .primary-nav a { text-decoration: none; }
+    @media (max-width: 980px) { .preview-products { grid-template-columns: 1fr; } }
+    @media (max-width: 820px) { .preview-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="preview-shell preview-header">
+      <a class="logo" href="#"></a>
+      <nav class="preview-nav primary-nav" aria-label="Preview navigation">
+        <a href="#">Home</a>
+        <a href="#">Store</a>
+        <a href="#">Knowledgebase</a>
+        <a href="#">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="preview-grid main-content">
+    <aside class="preview-sidebar">
+      <section class="panel panel-sidebar">
+        <div class="panel-heading">Categories</div>
+        <div class="list-group">
+          <a class="list-group-item" href="#">Web Hosting</a>
+          <a class="list-group-item active" href="#">Webcare by Mutare.biz</a>
+        </div>
+      </section>
+
+      <section class="panel panel-sidebar">
+        <div class="panel-heading">Actions</div>
+        <div class="list-group">
+          <a class="list-group-item" href="#">Register a New Domain</a>
+          <a class="list-group-item" href="#">Transfer in a Domain</a>
+          <a class="list-group-item" href="#">View Cart</a>
+        </div>
+      </section>
+    </aside>
+
+    <section>
+      <h1>Hosting Solution for your Business</h1>
+      <p>Choose the hosting solution that suits your business and let us worry about the rest</p>
+      <div id="order-standard_cart">
+        <div class="products preview-products">
+          <article class="product">
+            <header>
+              <span class="product-title">Online Starter</span>
+            </header>
+            <div class="pricing preview-price">$19.00 USD<br>Monthly<br><small>$149.00 Setup Fee</small></div>
+            <p class="product-desc">A clean one-page website with hosting, SSL, contact form, WhatsApp button, and one monthly update.</p>
+            <a href="cart.php?a=add&amp;pid=11">Order Now</a>
+          </article>
+
+          <article class="product">
+            <span class="popular preview-ribbon">Popular</span>
+            <header>
+              <span class="product-title">Business Presence</span>
+            </header>
+            <div class="pricing preview-price">$39.00 USD<br>Monthly<br><small>$299.00 Setup Fee</small></div>
+            <p class="product-desc">A five-page business website with hosting, SSL, email setup, enquiry flow, and monthly updates.</p>
+            <a href="cart.php?a=add&amp;pid=12">Order Now</a>
+          </article>
+
+          <article class="product">
+            <header>
+              <span class="product-title">Managed Growth</span>
+            </header>
+            <div class="pricing preview-price">$79.00 USD<br>Monthly<br><small>$499.00 Setup Fee</small></div>
+            <p class="product-desc">Ongoing website support with hosting, SSL, email setup, SEO cleanup, priority help, and weekly updates.</p>
+            <a href="cart.php?a=add&amp;pid=13">Order Now</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer preview-footer">
+    <div class="preview-shell">
+      <a href="#">Contact Us</a>
+      &nbsp;&nbsp;
+      <a href="#">Terms of Service</a>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,4 @@
+name: "WebCare Cart"
+author: "Mutare.biz"
+config:
+  parent: standard_cart
