@@ -15,7 +15,7 @@ cd /home/manikauk/repos/webcare.mutare.biz
 WHMCS_ROOT=/home/manikauk/public_html DEPLOY_REPO=/home/manikauk/repos/webcare.mutare.biz ./scripts/server-pull-deploy.sh
 ```
 
-Then add this cron entry:
+Then add this command in cPanel's native **Cron Jobs** screen:
 
 ```cron
 */10 * * * * WHMCS_ROOT=/home/manikauk/public_html DEPLOY_REPO=/home/manikauk/repos/webcare.mutare.biz /home/manikauk/repos/webcare.mutare.biz/scripts/server-pull-deploy.sh >/dev/null 2>&1
@@ -27,6 +27,12 @@ The cron command pulls `origin/main`, resets the server checkout to that revisio
 - `templates/orderforms/webcare_cart`
 
 Logs are written to `/home/manikauk/repos/webcare.mutare.biz/deploy.log`.
+
+WHMCS automation itself should use a separate cPanel Cron Jobs entry:
+
+```cron
+*/5 * * * * /usr/bin/php -q /home/manikauk/manika_whmcs/crons/cron.php
+```
 
 ## Production Safety
 

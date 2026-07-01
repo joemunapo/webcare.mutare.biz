@@ -6,7 +6,7 @@ Research checked against WHMCS Developer Documentation on 2026-07-01.
 
 WHMCS recommends child themes for customisations. A child theme inherits templates and assets from a parent theme, and the child only needs to contain files that are customised. CSS-only changes can live in `css/custom.css`, which default WHMCS themes load automatically after the parent theme CSS.
 
-This repo uses a `twenty-one` parent because the current storefront resembles the Twenty-One structure. If the live WHMCS system theme is confirmed to be `nexus`, change `config.parent` in `whmcs/templates/webcare/theme.yaml` before activation.
+This repo uses the WHMCS v9 `nexus` system theme as the parent. Keep customisations in the `webcare` child theme so WHMCS core templates remain updateable.
 
 Minimum system child theme:
 
@@ -14,7 +14,7 @@ Minimum system child theme:
 name: "WebCare by Mutare.biz"
 author: "Mutare.biz"
 config:
-  parent: twenty-one
+  parent: nexus
 ```
 
 Preview with:

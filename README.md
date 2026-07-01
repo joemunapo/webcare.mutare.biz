@@ -11,7 +11,7 @@ Deployment-ready WHMCS v9 child theme and order-form styling for WebCare by Muta
 - `scripts/deploy-theme.sh` - copies the theme folders into a WHMCS install.
 - `scripts/server-pull-deploy.sh` - server-side pull and deploy script for cron.
 
-The system theme is a child of `twenty-one`, which keeps WHMCS core templates updateable and only overrides styling through `css/custom.css`.
+The system theme is a child of `nexus`, which keeps WHMCS core templates updateable and only overrides styling through `css/custom.css`.
 The Tailwind build intentionally omits Preflight resets so the WHMCS parent theme keeps its expected base behavior.
 
 ## Local Build
