@@ -20,7 +20,7 @@ mkdir -p "$(dirname "$LOG_FILE")"
     cd "$DEPLOY_REPO"
 
     echo "$(date -Is) deploy start" >> "$LOG_FILE"
-    git fetch --prune "$REMOTE" "$BRANCH" >> "$LOG_FILE" 2>&1
+    git fetch --prune "$REMOTE" "refs/heads/$BRANCH:refs/remotes/$REMOTE/$BRANCH" >> "$LOG_FILE" 2>&1
     git checkout "$BRANCH" >> "$LOG_FILE" 2>&1
     git reset --hard "$REMOTE/$BRANCH" >> "$LOG_FILE" 2>&1
 
