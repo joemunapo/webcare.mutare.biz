@@ -231,7 +231,6 @@
   }
 
   #order-standard_cart .products,
-  .products,
   .product-list,
   .product-selection {
     border: 0 !important;
@@ -240,9 +239,19 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  #order-standard_cart .products > .row {
+    display: contents;
+  }
+
+  #order-standard_cart .products > .row > [class*="col-"] {
+    float: none;
+    max-width: none;
+    padding: 0;
+    width: auto;
+  }
+
   #order-standard_cart .products .product,
   #order-standard_cart .product,
-  .product,
   .product-selection .option,
   .product-selection label,
   .cart-product-group label {
@@ -310,10 +319,13 @@
 
   #order-standard_cart .products .product .price,
   #order-standard_cart .products .product .pricing,
+  #order-standard_cart .products .product .product-pricing,
   #order-standard_cart .product .price,
   #order-standard_cart .product .pricing,
+  #order-standard_cart .product .product-pricing,
   .products .product .price,
-  .products .product .pricing {
+  .products .product .pricing,
+  .products .product .product-pricing {
     color: var(--wc-ink);
     font-size: 0.92rem;
     font-weight: 680;
@@ -329,8 +341,20 @@
     margin-bottom: 28px;
   }
 
+  #order-standard_cart .products .product footer,
+  #order-standard_cart .product footer,
+  .products .product footer {
+    background: transparent !important;
+    color: var(--wc-ink) !important;
+    margin-top: auto;
+    padding: 0 !important;
+    width: 100%;
+  }
+
   #order-standard_cart .products .product a[href*="cart.php?a=add"],
+  #order-standard_cart .products .product .btn-order-now,
   .products .product a[href*="cart.php?a=add"],
+  .products .product .btn-order-now,
   #order-standard_cart a[href*="cart.php?a=add&pid="] {
     align-items: center;
     align-self: stretch;
@@ -349,7 +373,9 @@
   }
 
   #order-standard_cart .products .product a[href*="cart.php?a=add"]:hover,
+  #order-standard_cart .products .product .btn-order-now:hover,
   .products .product a[href*="cart.php?a=add"]:hover,
+  .products .product .btn-order-now:hover,
   #order-standard_cart a[href*="cart.php?a=add&pid="]:hover {
     background: var(--wc-blue);
     border-color: var(--wc-blue);
@@ -390,14 +416,12 @@
     color: var(--wc-ink);
   }
 
-  footer,
   .footer,
   #footer {
     background: #0b1220 !important;
     color: #d0d5dd !important;
   }
 
-  footer a,
   .footer a,
   #footer a {
     color: #fff !important;
@@ -415,7 +439,6 @@
 
   #order-standard_cart .products .product,
   #order-standard_cart .product,
-  .product,
   .product-selection .option,
   .product-selection label,
   .cart-product-group label {
@@ -425,7 +448,6 @@
 
 @media (max-width: 1100px) {
   #order-standard_cart .products,
-  .products,
   .product-list,
   .product-selection {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -434,7 +456,6 @@
 
 @media (max-width: 720px) {
   #order-standard_cart .products,
-  .products,
   .product-list,
   .product-selection {
     grid-template-columns: 1fr;
@@ -442,7 +463,6 @@
 
   #order-standard_cart .products .product,
   #order-standard_cart .product,
-  .product,
   .product-selection .option,
   .product-selection label,
   .cart-product-group label {
